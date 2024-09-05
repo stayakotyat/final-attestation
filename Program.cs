@@ -24,8 +24,29 @@ string[] CreateStringArray(string[] array)
     return array;
 }
 
+int countingnumbers(string[] array)
+{
+    int count = 0;
+    int a = 0;
+    for (int i = 0; i < array.Length; i++)
+    {
+        foreach (char e in array[i])
+        {
+            a++;
+        }
+        if (a <= 3)
+        {
+            count++;
+        }
+        a = 0;
+    }
+    return count;
+}
+
 Console.WriteLine("Введи размер массива");
 int size = Convert.ToInt32(Console.ReadLine());
 
 string[] strarray = new string[size];
 strarray = CreateStringArray(strarray);
+string[] newarray = new string[countingnumbers(strarray)];
+
