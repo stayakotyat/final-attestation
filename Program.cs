@@ -43,6 +43,14 @@ int countingnumbers(string[] array)
     return count;
 }
 
+void PrintArray(string[] array)
+{
+    for (int i = 0; i < array.Length; i++)
+    {
+        Console.Write(array[i] + "\t");
+    }
+}
+
 Console.WriteLine("Введи размер массива");
 int size = Convert.ToInt32(Console.ReadLine());
 
@@ -50,5 +58,14 @@ string[] strarray = new string[size];
 strarray = CreateStringArray(strarray);
 string[] newarray = new string[countingnumbers(strarray)];
 
+int index = 0;
+for (int i = 0; i < strarray.Length; i++)
+{
+    if (strarray[i].Length <= 3)
+    {
+        newarray[index] = strarray[i];
+        index++;
+    }
+}
 
- 
+PrintArray(newarray);
