@@ -10,3 +10,22 @@
 // [“Hello”, “2”, “world”, “:-)”] → [“2”, “:-)”]
 // [“1234”, “1567”, “-2”, “computer science”] → [“-2”]
 // [“Russia”, “Denmark”, “Kazan”] → []
+
+
+string[] CreateStringArray(string[] array)
+{
+    for (int i = 0; i < array.Length; i++)
+    {
+        Console.WriteLine($"Введи {i + 1}(ую) строку");
+        Console.WriteLine();
+        array[i] = Console.ReadLine()!;
+        Console.WriteLine();
+    }
+    return array;
+}
+
+Console.WriteLine("Введи размер массива");
+int size = Convert.ToInt32(Console.ReadLine());
+
+string[] strarray = new string[size];
+strarray = CreateStringArray(strarray);
