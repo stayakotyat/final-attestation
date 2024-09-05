@@ -14,3 +14,5 @@
 
 
 # Вывод массива в терминал
+
+![Image alt](https://github.com/stayakotyat/final-attestation/blob/main/blockshema%20final%20work.jpg)
