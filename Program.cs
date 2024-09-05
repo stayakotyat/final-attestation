@@ -50,4 +50,5 @@ string[] strarray = new string[size];
 strarray = CreateStringArray(strarray);
 string[] newarray = new string[countingnumbers(strarray)];
 
+
  
